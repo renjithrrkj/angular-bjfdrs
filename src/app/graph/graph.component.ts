@@ -18,27 +18,27 @@ export class GraphComponent implements OnInit {
     responsive: true    // THIS WILL MAKE THE CHART RESPONSIVE (VISIBLE IN ANY DEVICE).
   }
 
-  labels =  ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'];
+  labels =  ['TeamA', 'TeamB', 'TeamC', 'TeamD', 'TeamE', 'TeamF', 'TeamG', 'TeamH', 'TeamI', 'TeamJ', 'TeamK', 'TeamL'];
 
   // STATIC DATA FOR THE CHART IN JSON FORMAT.
   chartData = [
     {
-      label: '1st Year',
+      label: 'pass',
       data: [21, 56, 4, 31, 45, 15, 57, 61, 9, 17, 24, 59] 
     },
     { 
-      label: '2nd Year',
-      data: [47, 9, 28, 54, 77, 51, 24]
+      label: 'fail',
+      data: [-33, -9, -28, -54, -77, -51, -24,-33,-12,-23,-44]
     }
   ];
 
   // CHART COLOR.
   colors = [
     { // 1st Year.
-      backgroundColor: 'rgba(77,83,96,0.2)'
+      backgroundColor: 'rgba(22,700,2,0.4)'
     },
     { // 2nd Year.
-      backgroundColor: 'rgba(30, 169, 224, 0.8)'
+      backgroundColor: 'rgba(2000, 19, 22, 0.8)'
     }
   ]
   

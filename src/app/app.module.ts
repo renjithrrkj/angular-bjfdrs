@@ -3,10 +3,15 @@ import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ChartsModule } from 'ng2-charts'
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { faCoffee } from '@fortawesome/free-solid-svg-icons';
+import { library } from '@fortawesome/fontawesome-svg-core';
+
 
 import { AppComponent } from './app.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
 import { GraphComponent } from './graph/graph.component';
+import { PiechartComponent } from './piechart/piechart.component';
 
 @NgModule({
   imports: [
@@ -15,16 +20,23 @@ import { GraphComponent } from './graph/graph.component';
     RouterModule.forRoot([
       { path: '', component: GraphComponent },
     ]),
-    ChartsModule
+    ChartsModule,
+    FontAwesomeModule
   ],
   declarations: [
     AppComponent,
     TopBarComponent,
-    GraphComponent
+    GraphComponent,
+    PiechartComponent
   ],
   bootstrap: [ AppComponent ]
 })
-export class AppModule { }
+
+export class AppModule { constructor() {
+    // Add an icon to the library for convenient access in other components
+    library.add(faCoffee);
+  }
+}
 
 
 /*
